@@ -225,8 +225,8 @@ double lorentz(double x, double mu, double A, double fwhm)
     double pos = 0.;
     double h = 0.;
 
-    pos = ( x - mu ) / fwhm;
-    h = A / fwhm / sqrt(pi);
+    pos = ( x - mu ) / fwhm / 2.;
+    h = A / fwhm / pi;
 
     return h / (1. + pow(pos, 2.) );
 }
